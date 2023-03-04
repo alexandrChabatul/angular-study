@@ -3,9 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { AppStateInterface } from 'src/app/shared/types/appState.interface';
-import { BackedErrorsInterface } from 'src/app/shared/types/backenErrors.interface';
-import { CurrentUserInterface } from 'src/app/shared/types/currentUser.interface';
-import { AuthService } from '../../services/auth.service';
+import { BackendErrorsInterface } from 'src/app/shared/types/backendErrors.interface';
 import { registerAction } from '../../store/actions/register.action';
 import { isSubmittingSelector, validationErrorsSelector } from '../../store/selectors';
 import { RegisterRequestInterface } from '../../types/registerRequest.interface';
@@ -18,12 +16,11 @@ import { RegisterRequestInterface } from '../../types/registerRequest.interface'
 export class RegisterComponent implements OnInit {
   form: FormGroup;
   isSubmitting$: Observable<boolean>;
-  backendErrors$: Observable<BackedErrorsInterface | null>
+  backendErrors$: Observable<BackendErrorsInterface | null>
 
   constructor(
     private fb: FormBuilder,
-    private store: Store<AppStateInterface>,
-    private authService: AuthService
+    private store: Store<AppStateInterface>
   ) {}
 
   ngOnInit(): void {
