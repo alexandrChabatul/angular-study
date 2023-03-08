@@ -5,7 +5,7 @@ import {
   getFeedAction,
   getFeedFailureAction,
   getFeedSuccessAction,
-} from './actions/getFedd.action';
+} from './actions/getFeed.action';
 
 const initialState: FeedStateInterface = {
   isLoading: false,

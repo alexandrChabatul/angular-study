@@ -3,7 +3,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { select, Store } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { getFeedAction } from '../store/actions/getFedd.action';
+import { getFeedAction } from '../store/actions/getFeed.action';
 import {
   errorSelector,
   feedSelector,
