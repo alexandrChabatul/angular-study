@@ -6,6 +6,7 @@ import { StoreModule } from '@ngrx/store';
 import { ErrorMessageModule } from '../errorMessage/errorMessage.module';
 import { LoadingModule } from '../loading/loading.module';
 import { PaginationModule } from '../pagination/pagination.module';
+import { TagListModule } from '../tagList/tagList.module';
 import { FeedComponent } from './feed/feed.component';
 import { FeedService } from './services/feed.service';
 import { GetFeedEffect } from './store/effects/getFeed.effect';
@@ -19,7 +20,8 @@ import { reducers } from './store/reducers';
     RouterModule,
     ErrorMessageModule,
     LoadingModule,
-    PaginationModule
+    PaginationModule,
+    TagListModule
   ],
   declarations: [FeedComponent],
   exports: [FeedComponent],
