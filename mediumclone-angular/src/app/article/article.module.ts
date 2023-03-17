@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { ErrorMessageModule } from '../shared/modules/errorMessage/errorMessage.module';
+import { FollowAuthorModule } from '../shared/modules/followAuthor/followAuthor.module';
 import { LoadingModule } from '../shared/modules/loading/loading.module';
 import { TagListModule } from '../shared/modules/tagList/tagList.module';
 import { ArticleService as SharedArticleService } from '../shared/services/article.service';
@@ -30,6 +31,7 @@ const routes = [
     ErrorMessageModule,
     LoadingModule,
     TagListModule,
+    FollowAuthorModule,
   ],
   declarations: [ArticleComponent],
   providers: [SharedArticleService, ArticleService],

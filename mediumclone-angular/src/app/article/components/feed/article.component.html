@@ -14,6 +14,12 @@
             {{ article.createdAt }}
           </span>
         </div>
+        <span
+            ><mc-follow-author
+              [isFollowed]="article.author.following"
+              [profileSlug]="article.author.username"
+            ></mc-follow-author>
+          </span>
         <span *ngIf="isAuthor$ | async">
           <a
             [routerLink]="['/articles', article.slug, 'edit']"

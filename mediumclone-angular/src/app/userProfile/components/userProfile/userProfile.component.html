@@ -7,7 +7,7 @@
           <h4>{{ userProfile.username }}</h4>
           <p>{{ userProfile.bio }}</p>
           <div>
-            FOLLOW USER BUTTON
+            <mc-follow-author [isFollowed]="userProfile.following" [profileSlug]="userProfile.username"></mc-follow-author>
             <a
               class="btn btn-sm btn-outline-secondary action-btn"
               [routerLink]="['/settings']"

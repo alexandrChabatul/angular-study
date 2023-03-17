@@ -1,0 +1,8 @@
+<button class="btn btn-sm action-btn btn-secondary" (click)="handleFollowClick()">
+  <ng-container *ngIf="isFollowed">
+    <i class="ion-plus-round"></i> &nbsp; Unfollow {{profileSlugProps}}
+  </ng-container>
+  <ng-container *ngIf="!isFollowed">
+    <i class="ion-plus-round"></i> &nbsp; Follow {{profileSlugProps}}
+  </ng-container>
+</button>
