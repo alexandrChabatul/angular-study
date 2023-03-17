@@ -21,7 +21,6 @@ export class AddToFavoritesEffect {
             return addToFavoritesSuccessAction({ article });
           }),
           catchError((error: HttpErrorResponse) => {
-            if (error.status === 401) return of(addToFavoritesUnauthorizedAction())
             return of(addToFavoritesFailureAction());
           })
         );
